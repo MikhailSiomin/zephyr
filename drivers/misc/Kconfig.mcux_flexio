@@ -1,0 +1,11 @@
+# Copyright (c) 2022, STRIM, ALC
+# SPDX-License-Identifier: Apache-2.0
+
+config MCUX_FLEXIO
+	bool
+	depends on HAS_MCUX_FLEXIO
+	depends on CLOCK_CONTROL
+	help
+	  Enable the FlexIO for SPI instances.
+	  FlexIO is not used separately.
+	  

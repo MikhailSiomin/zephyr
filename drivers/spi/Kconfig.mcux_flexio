@@ -1,0 +1,11 @@
+# Copyright (c) 2022, STRIM, ALC
+# SPDX-License-Identifier: Apache-2.0
+
+config SPI_MCUX_FLEXIO
+	bool "MCUX FlexIO SPI driver"
+	depends on HAS_MCUX_FLEXIO
+	depends on CLOCK_CONTROL
+	select MCUX_FLEXIO
+	help
+	  Enable support for MCUX FlexIO SPI driver.
+	  

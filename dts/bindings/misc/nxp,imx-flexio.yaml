@@ -1,0 +1,20 @@
+# Copyright (c) 2021, STRIM, ALC
+# SPDX-License-Identifier: Apache-2.0
+
+description: NXP i.MX FlexIO controller
+
+compatible: "nxp,imx-flexio"
+
+include: base.yaml
+
+properties:
+    reg:
+      required: true
+
+    interrupts:
+      required: true
+
+    clocks:
+      required: true
+
+

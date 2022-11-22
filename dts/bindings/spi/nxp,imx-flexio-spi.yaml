@@ -1,0 +1,48 @@
+# Copyright (c) 2021, STRIM, ALC
+# SPDX-License-Identifier: Apache-2.0
+
+description: NXP i.MX FlexIO SPI controller
+
+compatible: "nxp,imx-flexio-spi"
+
+include: [spi-controller.yaml, pinctrl-device.yaml]
+
+properties:
+    shifters:
+      type: array
+      required: true
+      description: |
+        Shifter index used in FlexIO SPI. 
+        Two shifters should be described for SPI.
+
+    timers:
+      type: array
+      required: true
+      description: |
+        Timer index used in FlexIO SPI. 
+        Two timers should be described for SPI.
+
+    sdo-pin:
+      type: int
+      required: true
+      description: |
+        Pin select for data output.
+
+    sdi-pin:
+      type: int
+      required: true
+      description: |
+        Pin select for data input.
+
+    sck-pin:
+      type: int
+      required: true
+      description: |
+        Pin select for clock.
+
+    cs-pin:
+      type: int
+      required: true
+      description: |
+        Pin select for enable. Not really used, but need for HAL.
+

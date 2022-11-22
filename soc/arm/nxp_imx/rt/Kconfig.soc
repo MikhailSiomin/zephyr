@@ -30,6 +30,7 @@ config SOC_MIMXRT1011
 	select HAS_MCUX_PMU
 	select HAS_MCUX_IOMUXC
 	select HAS_SWO
+	select HAS_MCUX_FLEXIO
 
 config SOC_MIMXRT1015
 	bool "SOC_MIMXRT1015"
@@ -55,6 +56,7 @@ config SOC_MIMXRT1015
 	select HAS_MCUX_PMU
 	select HAS_MCUX_IOMUXC
 	select HAS_SWO
+	select HAS_MCUX_FLEXIO
 
 config SOC_MIMXRT1021
 	bool "SOC_MIMXRT1021"
@@ -86,6 +88,7 @@ config SOC_MIMXRT1021
 	select HAS_MCUX_PMU
 	select HAS_MCUX_IOMUXC
 	select HAS_SWO
+	select HAS_MCUX_FLEXIO
 
 config SOC_MIMXRT1024
 	bool "SOC_MIMXRT1024"
@@ -117,6 +120,7 @@ config SOC_MIMXRT1024
 	select HAS_MCUX_PMU
 	select HAS_MCUX_IOMUXC
 	select HAS_SWO
+	select HAS_MCUX_FLEXIO
 
 config SOC_MIMXRT1051
 	bool "SOC_MIMXRT1051"
@@ -148,6 +152,7 @@ config SOC_MIMXRT1051
 	select HAS_MCUX_PMU
 	select HAS_MCUX_IOMUXC
 	select HAS_SWO
+	select HAS_MCUX_FLEXIO
 
 config SOC_MIMXRT1052
 	bool "SOC_MIMXRT1052"
@@ -184,6 +189,7 @@ config SOC_MIMXRT1052
 	select HAS_MCUX_IOMUXC
 	select HAS_MCUX_SRC
 	select HAS_SWO
+	select HAS_MCUX_FLEXIO
 
 config SOC_MIMXRT1061
 	bool "SOC_MIMXRT1061"
@@ -215,6 +221,7 @@ config SOC_MIMXRT1061
 	select HAS_MCUX_PMU
 	select HAS_MCUX_IOMUXC
 	select HAS_SWO
+	select HAS_MCUX_FLEXIO
 
 config SOC_MIMXRT1062
 	bool "SOC_MIMXRT1062"
@@ -255,6 +262,7 @@ config SOC_MIMXRT1062
 	select HAS_MCUX_ADC_ETC
 	select HAS_MCUX_SRC
 	select HAS_SWO
+	select HAS_MCUX_FLEXIO
 	select HAS_MCUX_XBARA
 
 config SOC_MIMXRT1064
@@ -294,6 +302,7 @@ config SOC_MIMXRT1064
 	select HAS_MCUX_PMU
 	select HAS_MCUX_IOMUXC
 	select HAS_SWO
+	select HAS_MCUX_FLEXIO
 
 config SOC_MIMXRT1176_CM7
 	bool "SOC_MIMXRT1176_CM7"

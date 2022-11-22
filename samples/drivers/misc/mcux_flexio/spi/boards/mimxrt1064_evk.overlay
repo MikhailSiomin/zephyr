@@ -1,0 +1,44 @@
+/*
+* Copyright (c) 2022, STRIM, ALC
+* SPDX-License-Identifier: Apache-2.0
+*/
+
+&pinctrl {
+	pinmux_flexio3spi: pinmux_flexio3spi {
+		group0 {
+			pinmux = <&iomuxc_gpio_ad_b1_10_flexio3_flexio10>,
+				// <&iomuxc_gpio_ad_b1_10_gpio1_io26>,
+				<&iomuxc_gpio_ad_b1_11_flexio3_flexio11>,
+				<&iomuxc_gpio_ad_b1_05_flexio3_flexio05>;
+			drive-strength = "r0-6";
+			slew-rate = "slow";
+			nxp,speed = "150-mhz";
+		};
+		group1 {
+			pinmux = <&iomuxc_gpio_ad_b1_04_flexio3_flexio04>;
+			drive-strength = "r0-6";
+			slew-rate = "slow";
+			nxp,speed = "150-mhz";
+			bias-pull-up-value = "22k";
+		};
+	};
+};
+
+&flexio3 {
+	status = "okay";
+	flexio3_spi0: flexio3_spi0 {
+		compatible = "nxp,imx-flexio-spi";
+		status = "okay";
+		#address-cells = <1>;
+		#size-cells = <0>;
+		cs-gpios = <&gpio1 26 GPIO_ACTIVE_LOW>;
+		shifters = <0 1>;
+		timers   = <0 1>;
+		sdo-pin = <5>;
+		sdi-pin = <4>; 
+		sck-pin = <11>;
+		cs-pin  = <10>; /* unused */
+		pinctrl-0 = <&pinmux_flexio3spi>;
+		pinctrl-names = "default";
+	};
+};
